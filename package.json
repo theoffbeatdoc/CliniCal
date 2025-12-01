@@ -2,12 +2,12 @@
   "name": "CliniCal",
   "version": "0.0.0",
   "private": false,
-  "main": "dist/index.cjs.js",    
-  "module": "dist/index.js", 
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "files": ["dist", "mdx"],
   "scripts": {
-    "build": "pnpm run clean && pnpm run build:babel",
-    "build:babel": "babel index.js components --out-dir dist --extensions \".js,.jsx\" --copy-files",
     "clean": "rm -rf dist",
+    "build": "tsup",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "builddocusaurus": "docusaurus build",
@@ -35,7 +35,8 @@
     "@babel/preset-env": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
     "@docusaurus/module-type-aliases": "2.4.0",
-    "pnpm": "^10.24.0"
+    "pnpm": "^10.24.0",
+    "tsup": "^8.5.1"
   },
   "browserslist": {
     "production": [

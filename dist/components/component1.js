@@ -26,21 +26,15 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// index.js
-var index_exports = {};
-__export(index_exports, {
-  FirstComponent: () => component1_default
-});
-module.exports = __toCommonJS(index_exports);
-
 // components/component1.js
+var component1_exports = {};
+__export(component1_exports, {
+  default: () => component1_default
+});
+module.exports = __toCommonJS(component1_exports);
 var import_react = __toESM(require("react"));
 var import_jsx_runtime = require("react/jsx-runtime");
 function FirstComponent() {
   return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "This is a dummy paragraph." }) });
 }
 var component1_default = FirstComponent;
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  FirstComponent
-});
