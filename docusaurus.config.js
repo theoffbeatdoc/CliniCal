@@ -41,7 +41,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           routeBasePath: '/',
-          path: './CliniCal',
+          path: './calculators',
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -140,7 +140,7 @@ const config = {
             return {
               resolve: {
                 alias: {
-                  "@CliniCal": path.resolve(__dirname, "./components"),
+                  "CliniCal": path.resolve(__dirname, "./"),
                 },
               },
             };
