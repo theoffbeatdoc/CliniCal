@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const path = require('path');
 
 /** @type {import('@docusaurus/types/src/index').DocusaurusConfig} */
 const config = {
@@ -129,7 +130,26 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
-    }
+    },
+
+    plugins: [
+      function webpackAliasPlugin() {
+        return {
+          name: "alias-CliniCal",
+          configureWebpack() {
+            return {
+              resolve: {
+                alias: {
+                  "@CliniCal": path.resolve(__dirname, "./components"),
+                },
+              },
+            };
+          },
+        };
+      },
+    ],
+
+
 };
 
 module.exports = config;
